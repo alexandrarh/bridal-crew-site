@@ -7,19 +7,20 @@ import Attire from './pages/Attire'
 import Bachelorette from './pages/Bachelorette'
 import BridalCrew from './pages/BridalCrew'
 import Financials from './pages/Financials'
+import Layout from './components/Layout'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/venues" element={<Venues />} />
-        <Route path="/schedule" element={<Schedule />} />
-        <Route path="/accommodation" element={<Accommodation />} />
-        <Route path="/attire" element={<Attire />} />
-        <Route path="/bachelorette" element={<Bachelorette />} />
-        <Route path="/bridal-crew" element={<BridalCrew />} />
-        <Route path="/financials" element={<Financials />} />
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/venues" element={<Layout><Venues /></Layout>} />
+        <Route path="/schedule" element={<Layout><Schedule /></Layout>} />
+        <Route path="/accommodation" element={<Layout><Accommodation /></Layout>} />
+        <Route path="/attire" element={<Layout><Attire /></Layout>} />
+        <Route path="/bachelorette" element={<Layout><Bachelorette /></Layout>} />
+        <Route path="/bridal-crew" element={<Layout><BridalCrew /></Layout>} />
+        <Route path="/financials" element={<Layout><Financials /></Layout>} />
       </Routes>
     </BrowserRouter>
   )
